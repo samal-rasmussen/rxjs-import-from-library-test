@@ -3,8 +3,8 @@ import {
 	Observer,
 } from 'rxjs';
 
-export function test$(): Observable<string> {
-	return Observable.create((observer: Observer<string>) => {
+export function test$() {
+	return Observable.create((observer) => {
 		setTimeout(
 			() => {
 				observer.next('banana');

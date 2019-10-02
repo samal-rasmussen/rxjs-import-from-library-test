@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: {
-		index: path.resolve('./src/index.ts'),
+		index: path.resolve('./src/index.js'),
 	},
 	output: {
 		libraryTarget: 'umd',
@@ -12,19 +12,7 @@ module.exports = {
 	mode: 'development',
 	devtool: 'source-map',
 	resolve: {
-		extensions: [ '.ts', '.js' ],
-	},
-	module: {
-		rules: [
-			{
-				test: /\.ts$/,
-				use: [
-					{
-						loader: 'ts-loader',
-					},
-				],
-			},
-		]
+		extensions: [ '.js' ],
 	},
 	plugins: [
 		new CleanWebpackPlugin(),

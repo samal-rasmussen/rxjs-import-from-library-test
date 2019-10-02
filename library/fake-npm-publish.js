@@ -13,13 +13,3 @@ fs.writeFileSync(
 		flag: 'w',
 	},
 );
-
-const indexDTS = fs.readFileSync('src/index.d.ts','utf8');
-
-fs.writeFileSync(
-	'dist/index.d.ts',
-	indexDTS,
-	{
-		flag: 'w',
-	},
-);

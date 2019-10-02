@@ -7,19 +7,7 @@ module.exports = {
 		main: ['./src/index'],
 	},
 	resolve: {
-		extensions: ['.ts', '.js'],
-	},
-	module: {
-		rules: [
-			{
-				test: /\.ts$/,
-				use: [
-					{
-						loader: 'ts-loader',
-					},
-				],
-			},
-		],
+		extensions: ['.js'],
 	},
 	plugins: [
 		new htmlWebpackPlugin(),

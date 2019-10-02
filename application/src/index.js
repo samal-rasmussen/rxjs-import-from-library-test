@@ -1,6 +1,5 @@
 import {
 	from,
-	Subscription,
 	of,
 } from 'rxjs';
 import {
@@ -10,7 +9,7 @@ import {
 	test$,
 } from '../../library/dist';
 
-const subscription1: Subscription = of(undefined).pipe(
+const subscription1 = of(undefined).pipe(
 	switchMap(() => {
 		return from(test$());
 	}),
@@ -28,7 +27,7 @@ const subscription1: Subscription = of(undefined).pipe(
 	}
 );
 
-const subscription2: Subscription = of(undefined).pipe(
+const subscription2 = of(undefined).pipe(
 	switchMap(() => {
 		return test$();
 	}),
